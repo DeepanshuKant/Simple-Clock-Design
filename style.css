@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("./yes.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.upper-text {
+  display: flex;
+  justify-content: center;
+}
+
+.upper-text h1 {
+  font-size: 5em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 3px;
+  margin-bottom: 30px;
+}
+
+#main-container {
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+  width: 50%;
+
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#day {
+  width: 400px;
+  position: absolute;
+  bottom: 30px;
+  color: white;
+  font-size: 35px;
+}
+.box {
+  border: 1px solid rgba(255, 255, 255, 0.096);
+  width: 120px;
+  height: 70px;
+  position: relative;
+  margin: 3px;
+  border-radius: 10px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2)
+  );
+
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.13);
+  backdrop-filter: blur(17px);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  cursor: none;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.616);
+}
+@media screen and (max-width: 960px) {
+  #hour::after {
+    content: "";
+    position: absolute;
+    left: 160px;
+  }
+  #minute::after {
+    content: "";
+    position: absolute;
+    left: 160px;
+  }
+  #day {
+    font-size: 10px;
+    width: 100px;
+  }
+}
+@media screen and (max-width: 360px) {
+  #day {
+    font-size: 15px;
+    width: 150px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #hour::after {
+    content: ":";
+    position: absolute;
+    left: 160px;
+  }
+  #minute::after {
+    content: ":";
+    position: absolute;
+    left: 160px;
+  }
+}
